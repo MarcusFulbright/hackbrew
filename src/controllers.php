@@ -16,7 +16,12 @@ $app->get(
     function ($endpoint) use ($app) {
         $bdb = new \Pintlabs_Service_Brewerydb($app['brewerydb.api_key']);
         $bdb->setFormat('json');
-        $results = $bdb->request($endpoint, array(), 'GET');
+
+        $results = $bdb->request(
+            $endpoint,
+            $app['request']->query->all(),
+            $app['request']->getMethod()
+        );
 
         return new JsonResponse($results);
     }
