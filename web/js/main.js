@@ -1,8 +1,9 @@
-d3.json("http://s.cdpn.io/1162/all-beers.json", function(data) {
- console.log(data.data[1].name);
-
- var abv = (data.data[1].abv);
- var ibu = (data.data[1].ibu);
+d3.json("/api/beers", function(data) {
+ var $i = 1;
+ console.log(data.data[$i].name);
+ console.log(data.data[$i]);
+ var abv = (data.data[$i].abv);
+ var ibu = (data.data[$i].ibu);
  var data = [abv, ibu];
  console.log(data);
 
