@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e6944aed7acfa289b40fd1b420914474",
+    "hash": "a763ef2f346dfc730ac25c7fa42a9b9e",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -112,6 +112,21 @@
                 "dependency injection"
             ],
             "time": "2013-03-08 08:21:40"
+        },
+        {
+            "name": "pintlabs/brewerydb",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:PintLabs/PHP-Brewerydb.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "."
+                }
+            }
         },
         {
             "name": "psr/log",

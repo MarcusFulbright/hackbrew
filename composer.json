@@ -1,4 +1,21 @@
 {
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "pintlabs/brewerydb",
+                "version": "0.1.0",
+                "source": {
+                    "url": "git@github.com:PintLabs/PHP-Brewerydb.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-0": { "": "." }
+                }
+            }
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "silex/silex": "~1.0",
@@ -15,7 +32,8 @@
         "symfony/security": "~2.2",
         "symfony/translation": "~2.2",
         "symfony/twig-bridge": "~2.2",
-        "symfony/validator": "~2.2"
+        "symfony/validator": "~2.2",
+        "pintlabs/brewerydb": "*"
     },
     "autoload": {
         "psr-0": { "": "src/" }
