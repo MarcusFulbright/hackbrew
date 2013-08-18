@@ -21,15 +21,17 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
     return $twig;
 }));
 
-$app['db.options'] = array(
-    'driver'   => 'pdo_mysql',
-    'dbname'   => 'hackbrew',
-    'host'     => 'localhost',
-    'user'     => 'root',
-    'password' => 'root'
+$app->register(
+    new DoctrineServiceProvider(),
+    array(
+        'db.options' => array(
+            'driver'   => 'pdo_mysql',
+            'dbname'   => 'hackbrew',
+            'host'     => 'localhost',
+            'user'     => 'root',
+            'password' => 'root'
+        )
+    )
 );
-$app->register(new DoctrineServiceProvider(), array(
-    'db.options' => $app['db.options'],
-));
 
 return $app;

@@ -10,6 +10,6 @@ You might have to mess around with the cache directory by manually making the fo
 
 If using vagrant, make sure to add
 
-    127.0.0.1 hackbrew.com
+    127.0.0.1 hackbrew.local
 
-to your hosts file
+to your hosts file. Now just open up your browser to http://hackbrew.local:8080

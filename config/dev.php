@@ -18,4 +18,3 @@ $app->register($p = new WebProfilerServiceProvider(), array(
     'profiler.cache_dir' => __DIR__.'/../cache/profiler',
 ));
 $app->mount('/_profiler', $p);
-

@@ -10,7 +10,7 @@ error_reporting(-1);
 DebugClassLoader::enable();
 ErrorHandler::register();
 if ('cli' !== php_sapi_name()) {
-        ExceptionHandler::register();
+    ExceptionHandler::register();
 }
 
 $app = require __DIR__.'/../src/app.php';
