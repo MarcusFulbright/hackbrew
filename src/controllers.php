@@ -20,7 +20,9 @@ $app->get(
 
         return new JsonResponse($results);
     }
-)->bind('api');
+)
+    ->assert('endpoint', '.+')
+    ->bind('api');
 
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
