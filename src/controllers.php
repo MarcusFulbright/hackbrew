@@ -12,11 +12,11 @@ $app->get('/', function () use ($app) {
 ->bind('homepage');
 
 $app->get(
-    '/api',
-    function () use ($app) {
+    '/api/{endpoint}',
+    function ($endpoint) use ($app) {
         $bdb = new \Pintlabs_Service_Brewerydb($app['brewerydb.api_key']);
         $bdb->setFormat('json');
-        $results = $bdb->request('beers', array(), 'GET');
+        $results = $bdb->request($endpoint, array(), 'GET');
 
         return new JsonResponse($results);
     }
