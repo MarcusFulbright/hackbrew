@@ -11,6 +11,17 @@ $app->get('/', function () use ($app) {
 })
 ->bind('homepage');
 
+$app->get(
+    '/api',
+    function () use ($app) {
+        $bdb = new \Pintlabs_Service_Brewerydb($app['brewerydb.api_key']);
+        $bdb->setFormat('json');
+        $results = $bdb->request('beers', array(), 'GET');
+
+        return new JsonResponse($results);
+    }
+)->bind('api');
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
