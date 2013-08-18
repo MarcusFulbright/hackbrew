@@ -23,7 +23,7 @@ class { 'apache':
 class { "apache::mod::rewrite": }
 class { "apache::mod::php": }
 apache::vhost { 'hackbrew.local':
-    docroot    => '/vagrant/web',
+    docroot    => '/var/www/homebrew.local/web',
     servername => "hackbrew.local",
     port       => 80,
     ensure     => present,
