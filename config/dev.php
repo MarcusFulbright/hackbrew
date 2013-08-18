@@ -19,10 +19,3 @@ $app->register($p = new WebProfilerServiceProvider(), array(
 ));
 $app->mount('/_profiler', $p);
 
-$app['db.options'] = array(
-    'driver'   => 'pdo_mysql',
-    'dbname'   => 'hackbrew',
-    'host'     => 'localhost',
-    'user'     => 'root',
-    'password' => 'root'
-);
